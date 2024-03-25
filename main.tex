@@ -1,0 +1,85 @@
+\documentclass{extarticle}
+\sloppy
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PACKAGES            																						  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[10pt]{extsizes}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[shortlabels]{enumitem}
+\usepackage{microtype} 
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{commath}
+\usepackage{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM ENVIRONMENT         																			           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems, breakable, skins}
+\newtcbtheorem{prob}% environment name
+              {Problem}% Title text
+  {enhanced, % tcolorbox styles
+  attach boxed title to top left={xshift = 4mm, yshift=-2mm},
+  colback=blue!5, colframe=black, colbacktitle=blue!3, coltitle=black,
+  boxed title style={size=small,colframe=gray},
+  fonttitle=\bfseries,
+  separator sign none
+  }%
+  {} 
+\newenvironment{problem}[1]{\begin{prob*}{#1}{}}{\end{prob*}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% THEOREMS/LEMMAS/ETC.         																			  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{thm}{Theorem}
+\newtheorem*{thm-non}{Theorem}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{corollary}[thm]{Corollary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MY COMMANDS   																						  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\bigO}{\mathcal{O}}
+\newcommand{\Real}{\mathcal{Re}}
+\newcommand{\poly}{\mathcal{P}}
+\newcommand{\mat}{\mathcal{M}}
+\DeclareMathOperator{\Span}{span}
+\newcommand{\Hom}{\mathcal{L}}
+\DeclareMathOperator{\Null}{null}
+\DeclareMathOperator{\Range}{range}
+\newcommand{\defeq}{\vcentcolon=}
+\newcommand{\restr}[1]{|_{#1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION NUMBERING																				           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand\thesection{\Alph{section}:}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DOCUMENT START              																			           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\vspace{-2em}Enter Title}
+\author{Author}
+\date{dd/mm/yyyy}
+
+\begin{document}
+\maketitle
+
+\newpage
+\tableofcontents
+\newpage
+
+
+% End
+\end{document}
